@@ -1,0 +1,10 @@
+services:
+  nextjs-app:
+    image: dev-fe:latest 
+    ports:
+      - "3060:3060"
+    env_file:
+      - .env
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
